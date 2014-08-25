@@ -1,28 +1,131 @@
+//////////////////////////////////////////////////////////////////////////
+// CSS RESET -- ERIC MEYER ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u,
+i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav, output,
+ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// COLOR VARIABLES ///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+$dkgray: #594f4e;
+$dkteal: #537980;
+$dkgray: #594f4e;
+$ltteal: #51aea8;
+$mdgray: #999494;
+$ltgray: #e4ebec;
+
+//////////////////////////////////////////////////////////////////////////
+// UNIVERSAL STYLING /////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+	font-size: 1em;
+	line-height: 1.6;
+	color: $mdgray;
+	vertical-align: top;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
+h1, h2, h3, h4, h5, h6 { color: $dkteal; }
+
+//////////////////////////////////////////////////////////////////////////
+// NAV BAR STYLING ///////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+.nav-bar {
+	height: 40px;
+	background-color: $ltteal;
+	margin-bottom: 20px;
+
+	.nav-bar-container {
+		width: 80%;
+		margin: 0 auto;
+		
+		a {
+			color: #fff;
+			line-height: 40px;
+			text-decoration: none;
+		}
+
+		.features, .pricing, .tour { margin-right: 8px; }
+		.login { float: right; }
+
+		.nav { &:hover { color: $dkgray; } }
+	}
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.emr-logo {
+	color: #fff;
+	height: 16px;
+	margin: 10px 8px 0 0;
 }
+		
+//////////////////////////////////////////////////////////////////////////
+// HERO IMAGE & TEXT /////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+.hero-text {
+	font-size: 3em;
+	text-align: center;
+}
+
+.hero-image {
+	height: 342px;
+	background-image: url(..//images/screen-hero.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.hero-hr {
+	background-color: $ltgray;
+	height: 12px;
+  border: 0;
+  box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+	margin: 0;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// TILES STYLING /////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+.wrapper {
+	padding-top: 20px;
+	background-color: $ltgray;
+	min-height: 560px;
+}
+
+.tile-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.tile {
+	width: 31%;
+	margin: 0 3.5% 3.5% 0;
+	min-height: 150px;
+	float: left;
+
+	hr {
+		height: 2px;
+		background-color: $dkteal;
+		border: 0 none;
+	}
+}
+
+.tile:nth-child(3n+3) {margin-right: 0;}
+
+//////////////////////////////////////////////////////////////////////////
+// FOOTER STYLING ////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
